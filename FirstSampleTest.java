@@ -12,8 +12,8 @@ import java.net.URL;
 
 public class FirstSampleTest {
 	
-	    public String username = "koshinder";
-	    public String accesskey = "U17BIhciO24gmuY8On6bj2PHu1G5I98HH3qwrLoSza8HHPitJE";
+	    public String username = "UserName";
+	    public String accesskey = "AccessKey";
 	    public static RemoteWebDriver driver = null;
 	    public String gridURL = "@hub.lambdatest.com/wd/hub";
 	    boolean status = false;
