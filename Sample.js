@@ -46,4 +46,5 @@ function searchTextOnGoogle() {
         });
     });
 }
+
 searchTextOnGoogle();
