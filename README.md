@@ -46,4 +46,17 @@ npm i selenium-webdriver
 ```
 node lambdatest.js
 ```
+### For running NodeJS Tests
+```
+# Go to the directory where the file is saved
+cd /path/to/the/test/directory
+```
+
+```
+javac lambdatest.java
+```
+
+```
+java lambdatest
+```
 
