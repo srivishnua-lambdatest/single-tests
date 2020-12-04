@@ -14,6 +14,12 @@ cd /path/to/the/test/directory
 pip install pytest && pip install selenium>2.5
 ```
 
+For Appium 
+```cmd
+# Install the dependencies
+pip install pytest && pip install Appium-Python-Client
+```
+
 ```
 python lambdatest.py
 ```
