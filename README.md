@@ -8,7 +8,7 @@ This format is supported for all the OS:
 # Go to the directory where the file is saved
 cd /path/to/the/test/directory
 ```
-
+For Selenium
 ```cmd
 # Install the dependencies
 pip install pytest && pip install selenium>2.5
