@@ -29,10 +29,15 @@ python lambdatest.py
 # Go to the directory where the file is saved
 cd /path/to/the/test/directory
 ```
-
+For Selenium
 ```cmd
 # Install the required dependencies
 gem install selenium-webdriver && gem install ffi
+```
+For Appium
+```cmd
+# Install the required dependencies
+gem install appium_lib
 ```
 ```
 # To execute the test
