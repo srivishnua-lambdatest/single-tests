@@ -13,44 +13,47 @@ import org.testng.annotations.BeforeTest;
 public class Lambdatest {
 
 	public RemoteWebDriver driver = null;
-   String username = "koshinder+232";
+	String username = "koshinder+232";
 	String accessKey = "YaRxWH54NughMkrDVIhbuLrddStsdEOaeTEoHvnmtol6M4YWza";
-	
+
 	@BeforeTest
-    public void setUp() throws Exception {
-        ChromeOptions capabilities = new ChromeOptions();
-        capabilities.setCapability("user", username);
-        capabilities.setCapability("accessKey", accessKey);
-        capabilities.setCapability("platformName", "Windows 10");
-	     capabilities.setCapability("browserName", "Chrome");
-	     capabilities.setCapability("browserVersion", "87.0"); // If this cap isn't specified, it will just get the any available one
-        capabilities.setCapability("resolution","1024x768");
-        capabilities.setCapability("build", "First Test");
-        capabilities.setCapability("name", "Sample Test");
-        capabilities.setCapability("network", true); // To enable network logs
-        capabilities.setCapability("visual", true); // To enable step by step screenshot
-        capabilities.setCapability("video", true); // To enable video recording
-        capabilities.setCapability("console", true); // To capture console logs
-    
-        try {       
-			driver= new RemoteWebDriver(new URL("https://"+username+":"+accessKey+"@stage-hub.lambdatest.com/wd/hub"), capabilities);            
-        } catch (MalformedURLException e) {
-            System.out.println("Invalid grid URL");
-        }
-    }
+	public void setUp() throws Exception {
+		ChromeOptions capabilities = new ChromeOptions();
+		capabilities.setCapability("user", username);
+		capabilities.setCapability("accessKey", accessKey);
+		capabilities.setCapability("platformName", "Windows 10");
+		capabilities.setCapability("browserName", "Chrome");
+		capabilities.setCapability("browserVersion", "87.0"); // If this cap isn't specified, it will just get the any
+																// available one
+		capabilities.setCapability("resolution", "1024x768");
+		capabilities.setCapability("build", "First Test");
+		capabilities.setCapability("name", "Sample Test");
+		capabilities.setCapability("network", true); // To enable network logs
+		capabilities.setCapability("visual", true); // To enable step by step screenshot
+		capabilities.setCapability("video", true); // To enable video recording
+		capabilities.setCapability("console", true); // To capture console logs
+
+		try {
+			driver = new RemoteWebDriver(
+					new URL("https://" + username + ":" + accessKey + "@stage-hub.lambdatest.com/wd/hub"),
+					capabilities);
+		} catch (MalformedURLException e) {
+			System.out.println("Invalid grid URL");
+		}
+	}
 
 	@Test(enabled = true)
 	public void testScript() throws Exception {
-				try {
-					driver.get("https://lambdatest.github.io/sample-todo-app/");
-					driver.findElement(By.name("li1")).click();
-					driver.findElement(By.name("li2")).click();
-					driver.findElement(By.id("sampletodotext")).clear();
-					driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
-					driver.findElement(By.id("addbutton")).click();
-					driver.quit();					
-				} catch (Exception e) {
-					System.out.println(e.getMessage());
-				}
+		try {
+			driver.get("https://lambdatest.github.io/sample-todo-app/");
+			driver.findElement(By.name("li1")).click();
+			driver.findElement(By.name("li2")).click();
+			driver.findElement(By.id("sampletodotext")).clear();
+			driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
+			driver.findElement(By.id("addbutton")).click();
+			driver.quit();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 }
